@@ -5,6 +5,9 @@ const withAuth = require("../utils/auth");
 
 // GET 
 router.get("/", async (req, res) => {
+  res.render('all');
+});
+
   Post.findAll({
     // include the post ID, URL, title, and the timestamp from post creation
     attributes: [

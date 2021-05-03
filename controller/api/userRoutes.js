@@ -23,6 +23,9 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get('/login/:num',  async (req,res) => {
+  return res.render('login',loggedIn[req.params.num - 1]);
+});
 // Login
 router.post("/login", async (req, res) => {
   try {
